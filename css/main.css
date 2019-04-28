@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  padding: 0.75rem 0;
+  border-radius: 38px;
+  font-family: "MontSerrat";
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 80ms ease-in;
+}
+.btn:active {
+  transform: scale(0.94);
+}
+.btn:focus {
+  outline: none;
+}
+
+.orange-btn {
+  font-size: 1.875rem;
+  border: none;
+  background-color: #ea7141;
+  color: #fff;
+  width: 19.13rem;
+}
+
+.white-btn {
+  font-size: 1.25rem;
+  border: 1px solid #99999952;
+  background-color: #fff;
+  color: #ea7141;
+  width: 12.19rem;
+}
+.white-btn:hover {
+  box-shadow: 5px 7px 1px -1px #99999952;
+}
+
+.orange {
+  color: #ea7141;
+}
+
+.arrow {
+  margin-left: 1rem;
+}
+
+.landing-section {
+  background: url("../images_new/shutterstock-130099706.png");
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  height: 50rem;
+  background-color: #2a2d35;
+  color: #fff;
+}
+.landing-section .header-container {
+  padding: 4rem;
+}
+.landing-section .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.landing-section .landing-container {
+  width: 42rem;
+  margin: 0 auto;
+  padding-top: 3.5rem;
+  text-align: center;
+}
+.landing-section .landing-heading {
+  font-family: "MontSerrat";
+  font-style: normal;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+.landing-section .landing-wrap {
+  display: flex;
+  padding-top: 4rem;
+  width: 40rem;
+}
+.landing-section .sub-heading {
+  color: #9f9f9f;
+  margin-right: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+}
+.landing-section .img-grid-wrap {
+  margin-top: 12.5rem;
+}
+.landing-section .service-img {
+  margin: 1rem 0;
+}
+.landing-section .service-img-adjust {
+  margin-top: 0.5rem;
+}
+.landing-section .grid-5 {
+  width: calc(100%/5);
+  float: left;
+  padding-left: 4rem;
+}
+
+.articles-container {
+  padding: 4rem 0;
+  background-color: #f6f6f6;
+}
+.articles-container .share-wrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2.5rem 3rem;
+  text-align: center;
+}
+.articles-container .share-articles-wrap {
+  width: 38.94rem;
+}
+.articles-container .article {
+  border-top: 1rem solid #fff;
+  border-right: 2rem solid #fff;
+  border-left: 2rem solid #fff;
+}
+.articles-container .article:hover {
+  box-shadow: 16px 16px 1px -1px #99999952;
+}
+.articles-container .share-title {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-family: "MontSerrat";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.articles-container .share-text {
+  margin-bottom: 3rem;
+  color: #999999;
+  line-height: 1.5rem;
+}
+
+.coverage-wrap {
+  padding: 5rem 0;
+}
+.coverage-wrap .coverage-container {
+  display: flex;
+  padding: 0 11.5rem;
+}
+.coverage-wrap .coverage {
+  width: 26.13rem;
+}
+.coverage-wrap .coverage:first-child {
+  margin-right: 2rem;
+}
+.coverage-wrap .coverage-title {
+  margin: 1.5rem 0;
+  font-family: "MontSerrat";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+}
+.coverage-wrap .coverage-text {
+  margin-right: 1.5rem;
+  margin-bottom: 2rem;
+  color: #999999;
+  line-height: 1.5rem;
+}
+.coverage-wrap .black {
+  color: #000;
+}
+
+.add-tracker {
+  padding: 2rem 0 6rem;
+}
+.add-tracker .add-tracker-wrap {
+  text-align: center;
+}
+.add-tracker .add-tracker-title {
+  margin: 2rem 0;
+  font-family: "MontSerrat";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+}
+.add-tracker .add-tracker-text {
+  margin-bottom: 2rem;
+  color: #999999;
+  line-height: 1.5rem;
+}
+
+.footer {
+  padding: 2rem 0;
+  border-top: 1px solid #999999;
+}
+.footer .footer-wrap {
+  text-align: center;
+}
+.footer .list-unstyled {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+.footer .list-unstyled li {
+  padding: 0 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  color: #33363e;
+  border-right: 1px solid #33363e;
+}
+.footer .list-unstyled li:last-child {
+  border-right: 0;
+}
+.footer .trademark-text {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  color: rgba(51, 54, 62, 0.8);
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
