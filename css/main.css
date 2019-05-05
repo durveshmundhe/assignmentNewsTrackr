@@ -12,9 +12,11 @@ html {
 }
 
 .container {
-  max-width: 1200px;
-  margin-left: auto;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
+  margin-left: auto;
 }
 
 .btn {
@@ -91,7 +93,7 @@ html {
 .landing-section .landing-wrap {
   display: flex;
   padding-top: 4rem;
-  width: 40rem;
+  width: 42rem;
 }
 .landing-section .sub-heading {
   color: #9f9f9f;
@@ -100,7 +102,9 @@ html {
   line-height: 1.625rem;
 }
 .landing-section .img-grid-wrap {
-  margin-top: 12.5rem;
+  margin-top: 9.5rem;
+  display: flex;
+  justify-content: space-between;
 }
 .landing-section .service-img {
   margin: 1rem 0;
@@ -109,9 +113,13 @@ html {
   margin-top: 0.5rem;
 }
 .landing-section .grid-5 {
-  width: calc(100%/5);
-  float: left;
-  padding-left: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+.landing-section .img-grid {
+  max-width: 100%;
+  height: auto;
+  align-self: left;
 }
 
 .articles-container {
@@ -122,7 +130,7 @@ html {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 2.5rem 3rem;
+  padding: 2.5rem 0;
   text-align: center;
 }
 .articles-container .share-articles-wrap {
@@ -155,7 +163,7 @@ html {
 }
 .coverage-wrap .coverage-container {
   display: flex;
-  padding: 0 11.5rem;
+  justify-content: center;
 }
 .coverage-wrap .coverage {
   width: 26.13rem;
@@ -230,6 +238,11 @@ html {
   color: rgba(51, 54, 62, 0.8);
 }
 
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
 .popup-wrap {
   display: none;
   /* Hidden by default */
@@ -266,31 +279,163 @@ html {
   padding-top: 0;
 }
 
-.popup-content-right-chrome {
+.popup-right {
   width: 40%;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
 }
 
 .ie-content {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 25%;
 }
 
 .popup-left {
   padding-top: 0;
+  position: fixed;
+  top: 0;
 }
 
 .popup-content-left {
   float: left;
 }
 
-@media screen and (max-width: 767px) {
+.close {
+  cursor: pointer;
+}
+
+#myBtn {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  padding: 0.4rem 0.6rem;
+  background-color: #ea7141;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: transform 80ms ease-in;
+}
+#myBtn:active {
+  transform: scale(0.94);
+}
+
+@media (min-width: 576px) {
   .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .articles-container .share-articles-wrap {
+    width: auto;
+    margin-bottom: 3rem;
+  }
+  .articles-container .share-text {
+    margin-bottom: 1.5rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .articles-container .share-wrap {
+    flex-direction: column;
+  }
+
+  .coverage-wrap .coverage:first-child {
+    margin-right: 0;
+    margin-bottom: 2.5rem;
+  }
+  .coverage-wrap .coverage-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .coverage-wrap .coverage-text {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 14px;
+  }
+
+  .landing-section {
+    height: auto;
+  }
+  .landing-section .header-container {
+    padding: 3rem 2rem;
+  }
+  .landing-section .landing-container {
+    width: auto;
+  }
+  .landing-section .landing-wrap {
+    width: auto;
+    flex-direction: column;
+  }
+  .landing-section .landing-wrap .btn-wrap {
+    text-align: center;
+  }
+  .landing-section .sub-heading {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+  .landing-section .img-grid-wrap {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5.5rem;
+  }
+  .landing-section .grid-5 {
+    margin-bottom: 0.5rem;
+  }
+  .landing-section .img-grid {
+    align-self: center;
+  }
+
+  .coverage-wrap .coverage {
+    width: auto;
+  }
+
+  .orange-btn {
+    width: 16.13rem;
+  }
+
+  .footer .list-unstyled {
+    flex-direction: column;
+  }
+  .footer .list-unstyled li {
+    padding: 0.5rem 0;
+    border-right: 0;
+  }
+}
+@media screen and (max-width: 425px) {
+  .navbar a {
+    margin-right: 0.8rem;
+  }
+
+  .landing-section .header-container {
+    padding: 3rem 1rem;
+  }
+
+  .articles-container .article {
+    border-right: none;
+    border-left: none;
   }
 }
 

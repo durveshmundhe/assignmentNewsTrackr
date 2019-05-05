@@ -1,59 +1,58 @@
 
-// Get the modal
-var modal = document.getElementById('popup');
+// Get the popup
+var popup = document.getElementById('popup');
 
-var modal_content = document.getElementById('popup-content');
+var popup_content = document.getElementById('popup-content');
 var winNav = window.navigator;
 var isIEedge = winNav.userAgent.indexOf("Edge") > -1;
 var isFirefox = winNav.userAgent.indexOf('Firefox') > -1;
 var isSafari = winNav.userAgent.indexOf('Safari') > -1;
 var isChromium = window.chrome;
-// Get the button that opens the modal
-var btn = document.getElementById("cont-btn");
 
-// Get the <span> element that closes the modal
+
+// Get the button that opens the popup
+var btn = document.getElementById("continue-btn");
+
+// Get the <span> element that closes the popup
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
+// When the user clicks the button, open the popup 
 btn.onclick = function() {
-    modal.style.display = "block";
+    popup.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the modal
+// When the user clicks on <span> (x), close the popup
 span.onclick = function() {
-    modal.style.display = "none";
+    popup.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
+// When the user clicks anywhere outside of the popup, close it
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    if (event.target == popup) {
+        popup.style.display = "none";
     }
 }
 
 
 if (isChromium) {
-    modal.setAttribute('class',"popup popup-right");
-    modal_content.setAttribute('class',"popup-content popup-content-right-chrome");
+    popup.setAttribute('class',"popup popup-right");
+    popup_content.setAttribute('class',"popup-content popup-right");
 }
 
 if(isIEedge) {
-    modal_content.setAttribute('class',"popup-content ie-content");
+    popup_content.setAttribute('class',"popup-content ie-content");
 }
 
 if (isFirefox) {
-    modal.setAttribute('class',"modal modal-left");
-    modal_content.setAttribute('class',"popup-content popup-content-left");
+    popup.setAttribute('class',"popup popup-left");
+    popup_content.setAttribute('class',"popup-content popup-left");
 }
 
 if (isSafari) {
-    modal.setAttribute('class',"modal modal-right");
-    modal_content.setAttribute('class',"popup-content popup-content-right");
+    popup.setAttribute('class',"popup popup-right");
+    popup_content.setAttribute('class',"popup-content popup-right");
 }
 
-
-// When the user scrolls down show the button
-// window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
