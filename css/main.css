@@ -119,7 +119,7 @@ html {
 .landing-section .img-grid {
   max-width: 100%;
   height: auto;
-  align-self: left;
+  align-self: flex-start;
 }
 
 .articles-container {
@@ -241,6 +241,10 @@ html {
 .image {
   max-width: 100%;
   height: auto;
+}
+
+.popup {
+  display: none;
 }
 
 .popup-wrap {
@@ -393,7 +397,7 @@ html {
   }
   .landing-section .sub-heading {
     margin-right: 0;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
   }
   .landing-section .img-grid-wrap {
     flex-direction: column;
@@ -422,6 +426,9 @@ html {
   .footer .list-unstyled li {
     padding: 0.5rem 0;
     border-right: 0;
+  }
+  #myBtn {
+    display: none;
   }
 }
 @media screen and (max-width: 425px) {
